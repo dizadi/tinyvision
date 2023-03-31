@@ -4,7 +4,7 @@ import abc
 from PIL import Image
 from tinygrad import Tensor
 
-ImageType = Union[Tensor, Image, NDArray]
+ImageType = Union[Tensor, Image.Image, NDArray]
 
 class Transform(Callable, abc.ABC):
     """Base transform object. Defines interfaces."""

@@ -25,3 +25,7 @@ class TinyImage(Tensor):
 
     def to_numpy(self) -> NDArray:
         pass
+
+    def save(self, filepath: str) -> None:
+        pil_image = self.to_pil()
+        pil_image.save(filepath)

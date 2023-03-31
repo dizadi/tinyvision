@@ -2,6 +2,13 @@ from tinygrad import Tensor
 from tinyvision.transforms import Transform
 from typing import Tuple
 
+class Normalize(Transform):
+    def __init__(self, normalization_parameters: Tuple[float, float, float]) -> None:
+        self._normalization_parameters = normalization_parameters
+
+    def __call__(self, image: Tensor) -> Tensor:
+        """Normalizes the image with the given parameters."""
+        pass
 
 class Resize(Transform):
     def __init__(self, resized_shape: Tuple[int, int]) -> None:
